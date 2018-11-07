@@ -14,22 +14,22 @@ function pic(){
 
   var area = document.getElementById("controls");
   var i=0;
-  var btn = document.createElement("BUTTON");
-  var t = document.createTextNode("Change background picture");
-  btn.appendChild(t);
-  area.appendChild(btn);
+  var button = document.createElement("BUTTON");
+  var text = document.createTextNode("Change background picture");
+  button.appendChild(text);
+  area.appendChild(button);
   var images= ["url('http://www4.pictures.zimbio.com/gi/Neymar+Brazil+v+Chile+Round+16+2014+FIFA+World+hpntXA-Tt8Tl.jpg')","url('https://i.dailymail.co.uk/i/pix/2017/12/13/11/473892B200000578-0-image-a-1_1513165531839.jpg')","url('https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/06/23/21/neymargoal.jpg?w968h681')","url('https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/08/02/13/neymar0208aaa.jpg')"];
-  btn.onclick= function(){
+  button.onclick= function(){
 	i++;
 	if(i>3){
 	i=0;
 	}
+	
 	let box = document.getElementById("puzzlearea").getElementsByTagName("div");
-	for(let i = 0; i < box.length; i++){
-		box[i].style.backgroundSize ="400px 400px"; 
-		box[i].style.backgroundImage=image[i];
-	}	
-	grid();
+	for(let j = 0; j < box.length; j++){
+		box[j].style.backgroundSize ="400px 400px"; 
+		box[j].style.backgroundImage=images[i];
+	}		
   }
 }
 
